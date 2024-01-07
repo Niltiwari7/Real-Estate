@@ -4,7 +4,7 @@ import { errorHandler } from "../utils/error.js";
 
 export const signup = async (req, res, next) => {
     const { username, email, password } = req.body
-    console.log(req.body);
+    
     
     const hashedPassword = bcryptjs.hashSync(password,12);
    
