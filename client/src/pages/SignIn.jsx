@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
 import { useDispatch, useSelector } from 'react-redux'
 import { signInStart, signInSuccess, signInFailure } from '../redux/user/userSlice.js'
 export const SignIn = () => {
-
   const [formData, setFormData] = useState({});
   const { loading, error } = useSelector((state) => state.user);
   const navigzte = useNavigate()
