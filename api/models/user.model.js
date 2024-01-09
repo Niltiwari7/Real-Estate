@@ -17,6 +17,10 @@ const UserSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
+        avatar:{
+            type:String,
+            default:"https://images.pexels.com/photos/123335/pexels-photo-123335.jpeg"
+        }
     },
     { timestamps: true }
 );
