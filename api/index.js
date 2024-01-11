@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import bodyParser from 'body-parser';
 import userRouter from './routes/user.route.js'
 import authRouter from './routes/auth.route.js'
+import cookieParser from 'cookie-parser';
 
 dotenv.config()
 try {
@@ -16,6 +17,7 @@ try {
 const app = express()
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
+app.use(cookieParser())
 app.use('/api/user', userRouter)
 app.use('/api/auth', authRouter)
 
