@@ -41,8 +41,7 @@ export const deleteUser = async (req, res, next) => {
 
     const deletedUser = await User.findByIdAndDelete(req.params.id);
 
-    if (!deletedUser) {
-      // If the user with the specified ID does not exist
+    if (!deletedUser) {    
       return next(errorHandler(404, 'User not found'));
     }
     res.clearCookie('access_token')
@@ -51,3 +50,5 @@ export const deleteUser = async (req, res, next) => {
     next(error);
   }
 };
+
+
