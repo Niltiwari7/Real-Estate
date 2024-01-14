@@ -28,10 +28,10 @@ export default function Profile() {
   const [updateSuccess, setUpdateSuccess] = useState(false);
   const [showListingsError, setShowListingsError] = useState(false);
   const [userListings, setUserListings] = useState([]);
- 
+
   const dispatch = useDispatch();
 
- 
+
 
   useEffect(() => {
     if (file) {
@@ -280,6 +280,7 @@ export default function Profile() {
                 <Link to={`/update-listing/${listing._id}`}>
                   <button className='text-green-700 uppercase'>Edit</button>
                 </Link>
+
               </div>
             </div>
           ))}
